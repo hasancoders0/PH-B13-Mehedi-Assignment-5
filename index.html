@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | GitHub Issue Tracker</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+<section class="container-narrow">
+    <div class="login-card">
+        <div class="login-hero-wrapper">
+            <img src="./assets/github-logo.png" alt="Git Hub Logo" class="login-logo">
+            <h1>GitHub Issues Tracker</h1>
+            <p>Sign in to manage your issues</p>
+        </div>
+        <div class="login-wrapper">
+
+                <label for="username">Username</label>
+                <input id="get-username" type="text" id="username" name="username" placeholder="Enter your username"  value="admin" required>
+
+                <label for="password">Password</label>
+                <input id="get-password" type="password" id="password" name="password" placeholder="Enter your password"  value="admin123" required>
+
+                <button id="btn-login" class="btn active" type="submit">Sign In</button>
+                <div id="post-submission" class="post-submission"><p>Default: admin | admin123</p></div>
+                <div class="text-divider">OR</div>
+                <div class="demo">
+                    <p>Demo Credentials:</p>
+                    <div class="demo-credentials">
+                        <p><strong>Username:</strong> admin</p>
+                        <p><strong>Password:</strong> admin123</p>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</section>
+<script src="./script/login.js"></script>
+</body>
+</html>
