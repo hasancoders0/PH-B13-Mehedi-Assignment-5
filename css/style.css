@@ -58,7 +58,9 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background: #4a00ff;
     color: #fff;
 }
-
+.hidden{
+    display: none;
+}
 /* ======================
     Login Page Styles
 =========================*/
@@ -362,10 +364,48 @@ span.priority.low{
     padding: 32px;
     border-radius: 18px;
     position: fixed;
-    top: 30%;
-    left: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
     max-width: 700px;
     z-index: 10;
+}
+.status-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 12px 0;
+}
+.separetor {
+    height: 5px;
+    width: 5px;
+    background: #64748b;
+    border-radius: 100%;
+}
+.text-status {
+    padding: 2px 16px;
+    border-radius: 100px;
+    color: white;
+}
+.text-status.open {
+    background: #00a96e;
+}
+.text-status.close {
+    background: #a855f7;
+}
+.modal-bottom {
+    display: flex;
+    background: #F8FAFC;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 12px 0 22px 0;
+}
+.modal-bottom span{
+    width: 50%;
+}
+.close-modal {
+    text-align: right;
 }
 .modal-overlay {
     background: rgba(99, 99, 99, 0.5);

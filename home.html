@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | GitHub Issue Tracker</title>
+    <title>Home | GitHub Issue Tracker</title>
     <!-- Font Awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- Google Fonts -->
@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/github-logo.png" type="image/png">
 
 </head>
 <body>
@@ -33,11 +35,12 @@
 </header>
 <section class="container">
     <div class="nav-wrapper">
-        <button class="btn active">All</button>
-        <button class="btn">Open</button>
-        <button class="btn">Closed</button>
+        <button onclick="loadAllIssues()" class="btn active">All</button>
+        <button onclick="loadOpenIssues()" class="btn">Open</button>
+        <button onclick="loadClosedIssues()" class="btn">Closed</button>
     </div>
 </section>
+<div id="test-load"></div>
 <section class="container">
     <div class="section-issue-list">
         <div class="top-wrapper">
@@ -167,20 +170,19 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </section>
-<div class="modal">
+<div id="open-modal-1" class="modal hidden">
     <h1>Fix broken image uploads</h1>
     <div class="status-wrapper">
         <div class="text-status open">Open</div>
         <div class="separetor"></div>
         <p class="opened-by">Opened by Fahim Ahmed</p>
         <div class="separetor"></div>
-        <div class="date">22/02/2026</div>
+        <p class="date">22/02/2026</p>
     </div>
     <p class="modal-details">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
     <div class="labels">
@@ -193,8 +195,11 @@
         <span>Priority: <span class="priority high">HIGH</span></span>
         
     </div>
+    <div class="close-modal">
+        <button class="btn active">Close</button>
+    </div>
 </div>
-<div class="modal-overlay"></div>
+<div class="modal-overlay hidden"></div>
 <script src="./script/main.js"></script>
 </body>
 </html>
