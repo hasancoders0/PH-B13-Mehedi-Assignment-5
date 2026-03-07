@@ -397,7 +397,7 @@ span.priority.low{
 .text-status.open {
     background: #00a96e;
 }
-.text-status.close {
+.text-status.closed {
     background: #a855f7;
 }
 .modal-bottom {
@@ -422,3 +422,22 @@ span.priority.low{
     top: 0;
     z-index: 9;
 }
+.issues-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  --c:no-repeat radial-gradient(farthest-side,#25b09b 92%,#0000);
+  background: 
+    var(--c) top,
+    var(--c) left,
+    var(--c) right,
+    var(--c) bottom;
+  background-size: 12px 12px;
+  animation: l7 1s infinite;
+}
+@keyframes l7 {to{transform: rotate(.5turn)}}

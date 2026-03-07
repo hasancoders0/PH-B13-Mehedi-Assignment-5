@@ -35,9 +35,9 @@
 </header>
 <section class="container">
     <div class="nav-wrapper">
-        <button onclick="loadAllIssues()" class="btn active">All</button>
-        <button onclick="loadOpenIssues()" class="btn">Open</button>
-        <button onclick="loadClosedIssues()" class="btn">Closed</button>
+        <button onclick="loadAllIssues(this)" class="btn active">All</button>
+        <button onclick="loadOpenIssues(this)" class="btn">Open</button>
+        <button onclick="loadClosedIssues(this)" class="btn">Closed</button>
     </div>
 </section>
 <section class="container">
@@ -58,36 +58,29 @@
             </div>
         </div> 
         <div class="issues-wrapper">
+            <div id="issues-loader" class="hidden">
+                <div class="issues-loader">
+                    <div class="loader"></div>
+                </div>
+            </div>
             <div id="data-load-container" class="grid-wrapper">
             </div>
         </div>
     </div>
 </section>
-<div id="open-modal-1" class="modal hidden">
-    <h1>Fix broken image uploads</h1>
-    <div class="status-wrapper">
-        <div class="text-status open">Open</div>
-        <div class="separetor"></div>
-        <p class="opened-by">Opened by Fahim Ahmed</p>
-        <div class="separetor"></div>
-        <p class="date">22/02/2026</p>
+<div id="open_modal" class="modal hidden">
+    <div id="modal-loader" class="hidden">
+        <div class="issues-loader">
+            <div class="loader"></div>
+        </div>
     </div>
-    <p class="modal-details">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
-    <div class="labels">
-        <span class="bugs"><i class="fa-solid fa-bug"></i> Bugs</span>
-        <span class="help"><i class="fa-regular fa-life-ring"></i> Help Wanted</span>
-        <span class="enhancement"><i class="fa-solid fa-arrow-up-right-dots"></i> Enhancement</span>
-    </div>
-    <div class="modal-bottom">
-        <span>Assignee: <h2>Fahim Ahmed</h2></span>
-        <span>Priority: <span class="priority high">HIGH</span></span>
-        
+    <div id="modal-details">
     </div>
     <div class="close-modal">
-        <button class="btn active">Close</button>
+        <button onclick="closeModal()" class="btn active">Close</button>
     </div>
 </div>
-<div class="modal-overlay hidden"></div>
+<div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal()"></div>
 <script src="./script/main.js"></script>
 </body>
 </html>
