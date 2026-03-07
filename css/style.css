@@ -61,6 +61,11 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 .hidden{
     display: none;
 }
+@media (max-width: 679px) {
+    .sm-hidden{
+        display: none;
+    }
+}
 /* ======================
     Login Page Styles
 =========================*/

@@ -1,7 +1,7 @@
 const dataLoadWrapper = document.getElementById("data-load-container");
 const apiIssuesTrackerUrl = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 let allData;
-  enableIssueLoader();
+enableIssueLoader();
 fetch(apiIssuesTrackerUrl)
 .then(response => response.json())
 .then(data => {
@@ -13,6 +13,9 @@ fetch(apiIssuesTrackerUrl)
     disableIssueLoader();
     // console.log(allData);
 });
+
+
+// Modal Data
 async function loadModal(id){
     enableModalLoader();
     const apiSingleIssueUrl = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
@@ -58,8 +61,8 @@ function displayModalData(details){
         </div>
     `
 
-    console.log(dynamicModalData);
-    console.log(details);
+    // console.log(dynamicModalData);
+    // console.log(details);
 }
 function openModal(){
     const modalSec = document.getElementById("open_modal");
@@ -132,25 +135,32 @@ function setActiveButton(clickedBtn) {
     clickedBtn.classList.add("active");
 }
 
-async function loadAllIssues(btn){
+function loadAllIssues(btn){
     setActiveButton(btn);
     enableIssueLoader();
-    await new Promise(requestAnimationFrame);
+
     specificDataList(allData);
     disableIssueLoader();
 }
-async function loadOpenIssues(btn){
+function loadOpenIssues(btn){
     setActiveButton(btn);
     enableIssueLoader();
-    await new Promise(requestAnimationFrame);
+
     const openIssues = allData.filter(data => data.status === "open");
     specificDataList(openIssues);
     disableIssueLoader();
 }
-async function loadClosedIssues(btn){
+function loadClosedIssues(btn){
     setActiveButton(btn);
     enableIssueLoader();
-    await new Promise(requestAnimationFrame);
+
+    const closeIssues = allData.filter(data => data.status === "closed");
+    specificDataList(closeIssues);
+    disableIssueLoader();
+}
+function loadSearchIssues(){
+    enableIssueLoader();
+
     const closeIssues = allData.filter(data => data.status === "closed");
     specificDataList(closeIssues);
     disableIssueLoader();
