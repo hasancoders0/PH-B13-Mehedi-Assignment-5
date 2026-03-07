@@ -281,13 +281,14 @@ header{
 .status-open{
     background: #00a96e;
 }
-.status-close{
+.status-closed{
     background: #a855f7;
 }
 .inner-card {
     background: white;
     padding: 16px;
     border-radius: 8px;
+    height: 100%;
 }
 .card-head {
     display: flex;
@@ -328,7 +329,7 @@ span.priority.low{
     border: 1px solid;
     border-radius: 100px;
 }
-.labels .bugs{
+.labels .bug{
     background: #feecec;
     color: #ef4444;
     border-color: #FECACA !important;
@@ -342,6 +343,11 @@ span.priority.low{
     background: #DEFCE8;
     color: #00a96e;
     border-color: #BBF7D0 !important;
+}
+.labels .other-labels{
+    background: #e6ffb9;
+    color: #4c7500;
+    border-color: #e6ffb9 !important;
 }
 
 .card-bottom {
