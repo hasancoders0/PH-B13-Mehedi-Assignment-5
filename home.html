@@ -56,11 +56,12 @@
             </div>
         </div> 
         <div class="issues-wrapper">
-            <div class="grid-wrapper">
-                <div class="card status-open">
+            <div id="data-load-container" class="grid-wrapper">
+                <div class="card status-open" onclick="openModal(id)">
                     <div class="inner-card">
                         <div class="card-head">
                             <img src="./assets/Open-Status.png" alt="" class="status-open-icon">
+                            <span class="priority high">HIGH</span>
                         </div>
                         <div class="issue-details">
                             <h3>Fix navigation menu on mobile devices</h3>
@@ -69,7 +70,7 @@
                         <div class="labels">
                             <span class="bugs"><i class="fa-solid fa-bug"></i> Bugs</span>
                             <span class="help"><i class="fa-regular fa-life-ring"></i> Help Wanted</span>
-                            <span class="help"><i class="fa-solid fa-arrow-up-right-dots"></i> Enhancement</span>
+                            <span class="enhancement"><i class="fa-solid fa-arrow-up-right-dots"></i> Enhancement</span>
                         </div>
                         <div class="card-bottom">
                             <div class="declare-by">
@@ -78,17 +79,122 @@
                             </div>
                             <div class="date">
                                 <p>2024-01-23</p>
-                                <p><Strong>Updated</Strong>2024-01-23</p>
+                                <p><Strong>Updated: </Strong>2024-01-23</p>
                             </div>
                         </div>
                     </div>
 
                 </div>
-                <div class="card status-close"></div>
+                <div class="card status-open">
+                    <div class="inner-card">
+                        <div class="card-head">
+                            <img src="./assets/Open-Status.png" alt="" class="status-open-icon">
+                            <span class="priority low">LOW</span>
+                        </div>
+                        <div class="issue-details">
+                            <h3>Fix navigation menu on mobile devices</h3>
+                            <p>The navigation menu doesn't collapse properly on mobile devices...</p>
+                        </div>
+                        <div class="labels">
+                            <span class="bugs"><i class="fa-solid fa-bug"></i> Bugs</span>
+                            <span class="help"><i class="fa-regular fa-life-ring"></i> Help Wanted</span>
+                            <span class="enhancement"><i class="fa-solid fa-arrow-up-right-dots"></i> Enhancement</span>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="declare-by">
+                                <p>#1 by john_doe</p>
+                                <p><strong>Assignee:</strong> alex_perf</p>
+                            </div>
+                            <div class="date">
+                                <p>2024-01-23</p>
+                                <p><Strong>Updated: </Strong>2024-01-23</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card status-open">
+                    <div class="inner-card">
+                        <div class="card-head">
+                            <img src="./assets/Open-Status.png" alt="" class="status-open-icon">
+                            <span class="priority medium">MEDIUM</span>
+                        </div>
+                        <div class="issue-details">
+                            <h3>Fix navigation menu on mobile devices</h3>
+                            <p>The navigation menu doesn't collapse properly on mobile devices...</p>
+                        </div>
+                        <div class="labels">
+                            <span class="bugs"><i class="fa-solid fa-bug"></i> Bugs</span>
+                            <span class="help"><i class="fa-regular fa-life-ring"></i> Help Wanted</span>
+                            <span class="enhancement"><i class="fa-solid fa-arrow-up-right-dots"></i> Enhancement</span>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="declare-by">
+                                <p>#1 by john_doe</p>
+                                <p><strong>Assignee:</strong> alex_perf</p>
+                            </div>
+                            <div class="date">
+                                <p>2024-01-23</p>
+                                <p><Strong>Updated: </Strong>2024-01-23</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card status-close">
+                    <div class="inner-card">
+                        <div class="card-head">
+                            <img src="./assets/Closed- Status .png" alt="close" class="status-close-icon">
+                            <span class="priority high">HIGH</span>
+                        </div>
+                        <div class="issue-details">
+                            <h3>Fix navigation menu on mobile devices</h3>
+                            <p>The navigation menu doesn't collapse properly on mobile devices...</p>
+                        </div>
+                        <div class="labels">
+                            <span class="bugs"><i class="fa-solid fa-bug"></i> Bugs</span>
+                            <span class="help"><i class="fa-regular fa-life-ring"></i> Help Wanted</span>
+                            <span class="enhancement"><i class="fa-solid fa-arrow-up-right-dots"></i> Enhancement</span>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="declare-by">
+                                <p>#1 by john_doe</p>
+                                <p><strong>Assignee:</strong> alex_perf</p>
+                            </div>
+                            <div class="date">
+                                <p>2024-01-23</p>
+                                <p><Strong>Updated: </Strong>2024-01-23</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
 </section>
+<div class="modal">
+    <h1>Fix broken image uploads</h1>
+    <div class="status-wrapper">
+        <div class="text-status open">Open</div>
+        <div class="separetor"></div>
+        <p class="opened-by">Opened by Fahim Ahmed</p>
+        <div class="separetor"></div>
+        <div class="date">22/02/2026</div>
+    </div>
+    <p class="modal-details">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+    <div class="labels">
+        <span class="bugs"><i class="fa-solid fa-bug"></i> Bugs</span>
+        <span class="help"><i class="fa-regular fa-life-ring"></i> Help Wanted</span>
+        <span class="enhancement"><i class="fa-solid fa-arrow-up-right-dots"></i> Enhancement</span>
+    </div>
+    <div class="modal-bottom">
+        <span>Assignee: <h2>Fahim Ahmed</h2></span>
+        <span>Priority: <span class="priority high">HIGH</span></span>
+        
+    </div>
+</div>
+<div class="modal-overlay"></div>
 <script src="./script/main.js"></script>
 </body>
 </html>
