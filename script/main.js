@@ -169,6 +169,11 @@ function loadSearchIssues(){
 
     );
     specificDataList(searchIssues);
+        const buttons = document.querySelectorAll(".nav-wrapper button");
+
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
+    });
 }
 
 function issuesCount(){
