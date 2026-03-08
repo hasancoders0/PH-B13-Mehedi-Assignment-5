@@ -1,4 +1,3 @@
-
 1️⃣ What is the difference between var, let, and const?
 Answer: 
 Those are keyword to declare aspt as a Variable. 
