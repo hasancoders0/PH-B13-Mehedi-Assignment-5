@@ -76,6 +76,7 @@ function closeModal(){
     modalSec.classList.add("hidden");
     modalOverlay.classList.add("hidden");
 }
+// Main data Showing
 function specificDataList(datas){
     dataLoadWrapper.innerHTML = "";
     datas.forEach(data => {
@@ -158,12 +159,16 @@ function loadClosedIssues(btn){
     specificDataList(closeIssues);
     disableIssueLoader();
 }
-function loadSearchIssues(){
-    enableIssueLoader();
 
-    const closeIssues = allData.filter(data => data.status === "closed");
-    specificDataList(closeIssues);
-    disableIssueLoader();
+function loadSearchIssues(){
+
+    const searchInput = document.getElementById("search-issues").value;
+    const searchIssues = allData.filter(data =>
+        data.title.toLowerCase().includes(searchInput.toLowerCase()) || 
+        data.description.toLowerCase().includes(searchInput.toLowerCase())
+
+    );
+    specificDataList(searchIssues);
 }
 
 function issuesCount(){

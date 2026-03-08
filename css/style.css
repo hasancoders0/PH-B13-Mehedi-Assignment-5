@@ -149,14 +149,15 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 =========================*/
 /* ===== Header ======== */
 header{
-    max-width: 1450px;
-    width: 100%;
-    margin: 0 auto;
+   
     padding: 16px;
     background: white;
     box-shadow: 0 1px 5px 0 #1F293710;
 }
 .header-inner {
+    max-width: 1450px;
+    width: 100%;
+     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
